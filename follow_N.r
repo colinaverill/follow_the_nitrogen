@@ -32,7 +32,7 @@ follow_N <- function(N.plant = 0, N.soil = 300 ,
                      fert.effect = T){
   #Allowing for N deposition to increase plant growth, following Thomas et al. 2010.
   if(fert.effect == T){
-    stimulation <- (Ndep - 0.1)*0.5
+    stimulation <- 1 + (Ndep - 0.1)*0.5
     N.uptake = N.uptake * stimulation
   }
   #Differential equations.
