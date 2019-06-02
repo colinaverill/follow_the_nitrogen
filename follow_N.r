@@ -35,12 +35,15 @@ follow_N <- function(N.plant = 0, N.soil = 300 ,
     stimulation <- 1 + (Ndep - 0.1)*0.5
     N.uptake = N.uptake * stimulation
   }
+  
   #Differential equations.
   dN.plant = N.uptake - N.plant/MRT
   dN.soil  = N.plant/MRT + Ndep - N.uptake - N.loss
+  
   #Update state variables.
   N.plant  = N.plant + dN.plant
-  N.soil   = N.soil + dN.soil
+  N.soil   = N.soil  + dN.soil
+  
   #Return vector of updated state variables.
   out <- c(N.plant, N.soil)
   names(out) <- c('N.plant','N.soil')
