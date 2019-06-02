@@ -1,4 +1,7 @@
 #' follow_N.r
+#' This is the basic follow the nitrogen function.
+#' It simulates plant N uptake from soil, plant biomass N turnover, N deposition and N leaching.
+#' Embed this in a for loop to run a simulation in time. Example below.
 #'
 #' @param N.soil      Inital soil N stock in g N / m2. Default 350, mean from the FIA to 20cm.
 #' @param N.plant     Initial plant N stock in g N / m2. Default 0.
